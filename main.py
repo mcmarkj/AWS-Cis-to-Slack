@@ -1,6 +1,5 @@
 import boto3
 import datetime
-from dateutil import parser as dateutil_parser
 import json
 import requests
 
