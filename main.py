@@ -101,10 +101,10 @@ def getslackusername(User):
 
 def slackalert(msg):
     slack_body = {'text': msg}
-    
+
     response = requests.post(
-    hook_url, data=json.dumps(slack_body),
-    headers={'Content-Type': 'application/json'}
+        hook_url, data=json.dumps(slack_body),
+        headers={'Content-Type': 'application/json'}
     )
 
 
@@ -129,10 +129,10 @@ for User in users['Users']:
 
     for group in groups['Groups']:
         group_list.append(group['GroupName'])
-    
-    # If you use groups, and your bots are in a group. 
+
+    # If you use groups, and your bots are in a group.
     # Then replace `Bots` with the group name to bypass.
-    
+
     if 'Bots' in group_list:
         continue
 
